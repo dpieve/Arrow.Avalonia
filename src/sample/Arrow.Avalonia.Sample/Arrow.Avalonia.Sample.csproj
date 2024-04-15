@@ -19,6 +19,6 @@
     <PackageReference Include="ReactiveUI.Fody" Version="19.5.41" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Arrow.Avalonia\Arrow.Avalonia.csproj" />
+    <ProjectReference Include="..\..\Arrow.Avalonia\Arrow.Avalonia.csproj" />
   </ItemGroup>
 </Project>
