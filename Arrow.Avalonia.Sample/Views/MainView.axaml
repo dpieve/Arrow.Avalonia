@@ -1,0 +1,73 @@
+<UserControl
+    x:Class="Arrow.Avalonia.Sample.Views.MainView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:control="using:Arrow.Avalonia.Controls"
+    xmlns:converters="using:Arrow.Avalonia.Sample.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:v="using:Arrow.Avalonia.Sample.Views"
+    xmlns:vm="clr-namespace:Arrow.Avalonia.Sample.ViewModels"
+    MinWidth="400"
+    d:DesignHeight="500"
+    d:DesignWidth="600"
+    x:DataType="vm:MainViewModel"
+    mc:Ignorable="d">
+
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <UserControl.Resources>
+        <converters:BrushFromColor x:Key="BrushFromColor" />
+    </UserControl.Resources>
+
+    <Grid Margin="10" ColumnDefinitions="*, auto">
+
+        <!--  PLAYGROUND  -->
+        <Grid
+            Grid.Column="0"
+            Margin="5"
+            RowDefinitions="auto, *">
+
+            <TextBlock
+                Grid.Row="0"
+                Margin="0,0,0,5"
+                FontSize="20"
+                Text="Playground" />
+
+            <Grid
+                Grid.Row="1"
+                PointerMoved="PointerMoved"
+                PointerPressed="PointerPressed"
+                PointerReleased="PointerReleased">
+                <Border
+                    x:Name="PlaygroundBorder"
+                    Background="{Binding Menu.PlaygroundBackground, Converter={StaticResource BrushFromColor}}"
+                    CornerRadius="3" />
+
+                <!--  ARROW  -->
+                <control:Arrow
+                    HeadLength="{Binding Arrow.HeadLength, Mode=TwoWay}"
+                    HeadWidth="{Binding Arrow.HeadWidth, Mode=TwoWay}"
+                    IsFilled="{Binding Arrow.IsHeadFilled}"
+                    IsProportional="{Binding Arrow.IsHeadProportional}"
+                    IsVisible="{Binding Arrow.IsVisible}"
+                    Thickness="{Binding Arrow.Thickness}"
+                    Color="{Binding Arrow.Color}"
+                    StartPoint="{Binding Arrow.Start}"
+                    EndPoint="{Binding Arrow.End}" />
+            </Grid>
+        </Grid>
+
+        <!--  MENU  -->
+        <v:MenuView
+            Grid.Column="1"
+            MinWidth="200"
+            MaxWidth="200"
+            Margin="5"
+            DataContext="{Binding Menu}" />
+
+    </Grid>
+
+</UserControl>

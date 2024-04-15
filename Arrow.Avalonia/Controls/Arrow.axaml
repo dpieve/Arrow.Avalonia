@@ -1,0 +1,36 @@
+<UserControl
+    x:Class="Arrow.Avalonia.Controls.Arrow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <UserControl.Styles>
+        <Style Selector="Line">
+            <Setter Property="Stroke" Value="Green" />
+            <Setter Property="StrokeThickness" Value="5.0" />
+            <Setter Property="IsVisible" Value="True" />
+            <Setter Property="StrokeLineCap" Value="Round" />
+        </Style>
+    </UserControl.Styles>
+
+    <Grid x:Name="ArrowGrid">
+        <Line x:Name="ArrowLine" />
+        <Line x:Name="ArrowLineHeadLeft" />
+        <Line x:Name="ArrowLineHeadRight" />
+
+        <Path x:Name="TrianglePath" Fill="Green">
+            <!--  Read CreateFilledHead  -->
+            <!--<Path.Data>
+                <PathGeometry>
+                    <PathFigure IsClosed="True" StartPoint="{Binding #ArrowLine.EndPoint}">
+                        <LineSegment Point="{Binding #ArrowLineHeadLeft.StartPoint}" />
+                        <LineSegment Point="{Binding #ArrowLineHeadRight.StartPoint}" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>-->
+        </Path>
+    </Grid>
+</UserControl>

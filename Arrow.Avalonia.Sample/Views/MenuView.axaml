@@ -1,0 +1,83 @@
+<UserControl
+    x:Class="Arrow.Avalonia.Sample.Views.MenuView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:Arrow.Avalonia.Sample.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="200"
+    x:DataType="vm:MenuViewModel"
+    mc:Ignorable="d">
+    <StackPanel Margin="5" Orientation="Vertical">
+
+        <TextBlock
+            Margin="0,0,0,5"
+            FontSize="20"
+            Text="Settings" />
+
+        <CheckBox
+            Content="Head proportional"
+            IsChecked="{Binding Arrow.IsHeadProportional, Mode=TwoWay}"
+            ToolTip.Tip="Head grows proportionally with distance" />
+
+        <CheckBox Content="Head fill" IsChecked="{Binding Arrow.IsHeadFilled, Mode=TwoWay}" />
+
+        <TextBlock Margin="0,5,0,0" Text="Head Length" />
+        <StackPanel Orientation="Horizontal">
+            <Slider
+                x:Name="HeadLengthSlider"
+                Width="160"
+                IsEnabled="{Binding !Arrow.IsHeadProportional}"
+                Maximum="200"
+                Minimum="10"
+                Value="{Binding Arrow.HeadLength, Mode=TwoWay}}" />
+            <TextBlock
+                Margin="5"
+                VerticalAlignment="Center"
+                Text="{Binding #HeadLengthSlider.Value, StringFormat={}0}" />
+        </StackPanel>
+
+        <TextBlock Text="Head Width" />
+        <StackPanel Orientation="Horizontal">
+            <Slider
+                x:Name="HeadWidthSlider"
+                Width="160"
+                IsEnabled="{Binding !Arrow.IsHeadProportional}"
+                Maximum="200"
+                Minimum="10"
+                Value="{Binding Arrow.HeadWidth, Mode=TwoWay}" />
+            <TextBlock
+                Margin="5"
+                VerticalAlignment="Center"
+                Text="{Binding #HeadWidthSlider.Value, StringFormat={}0}" />
+        </StackPanel>
+
+        <TextBlock Text="Thickness" />
+        <StackPanel Orientation="Horizontal">
+            <Slider
+                x:Name="ThicknessSlider"
+                Width="160"
+                Maximum="200"
+                Minimum="1"
+                Value="{Binding Arrow.Thickness, Mode=TwoWay}" />
+            <TextBlock
+                Margin="5"
+                VerticalAlignment="Center"
+                Text="{Binding #ThicknessSlider.Value, StringFormat={}0}" />
+        </StackPanel>
+
+        <TextBlock Margin="0,0,0,5" Text="Color" />
+        <ColorPicker
+            Margin="0,5,0,5"
+            HorizontalAlignment="Left"
+            Color="{Binding Arrow.Color, Mode=TwoWay}" />
+
+        <TextBlock Margin="0,5,0,5" Text="Background" />
+        <ColorPicker
+            Margin="0,5,0,5"
+            HorizontalAlignment="Left"
+            Color="{Binding PlaygroundBackground, Mode=TwoWay}" />
+
+    </StackPanel>
+</UserControl>
