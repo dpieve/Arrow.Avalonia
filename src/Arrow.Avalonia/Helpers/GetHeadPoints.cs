@@ -5,7 +5,7 @@ namespace Arrow.Avalonia.Helpers;
 /// <summary>
 /// Gets the points that define a triangle to form the head of an arrow shape.
 /// </summary>
-internal static class GetHeadPoints
+public static class GetHeadPoints
 {
     public record Request(Arrow Arrow);
     public record class Response(HeadPoints? HeadPoints);
@@ -56,7 +56,7 @@ internal static class GetHeadPoints
     /// <summary>
     /// Direction X-axis is going
     /// </summary>
-    private static int GetDirection(double deltaX)
+    public static int GetDirection(double deltaX)
     {
         return deltaX >= 0 ? -1 : 1;
     }
@@ -67,7 +67,7 @@ internal static class GetHeadPoints
     /// <param name="deltaY">y2 - y1</param>
     /// <param name="deltaX">x2 - x1</param>
     /// <returns> m = (y2 - y1) / (x2 - x1)</returns>
-    private static double CalculateSlope(double deltaY, double deltaX)
+    public static double CalculateSlope(double deltaY, double deltaX)
     {
         return deltaY / deltaX;
     }
@@ -77,7 +77,7 @@ internal static class GetHeadPoints
     /// </summary>
     /// <param name="slope">slope = y2 - y1 / x2 - x1 </param>
     /// <returns>Perpendicular slope</returns>
-    private static double CalculatePerpendicularSlope(double slope)
+    public static double CalculatePerpendicularSlope(double slope)
     {
         return -1 / slope;
     }
@@ -85,7 +85,7 @@ internal static class GetHeadPoints
     /// <summary>
     /// Calculates the point that is len away from a reference point, following the direction and angle.
     /// </summary>
-    private static Point CalculatePoint(Point point, int direction, double len, double angle)
+    public static Point CalculatePoint(Point point, int direction, double len, double angle)
     {
         var pointAway = new Point(point.X + direction * len * Math.Cos(angle), point.Y + direction * len * Math.Sin(angle));
         var isVerticalLine = !pointAway.X.HasValue() || !pointAway.Y.HasValue();
@@ -99,7 +99,7 @@ internal static class GetHeadPoints
     /// <summary>
     /// Calculates the point that is distance away from the reference point, following an angle.
     /// </summary>
-    private static Point CalculatePoint(Point point, double distance, double angle)
+    public static Point CalculatePoint(Point point, double distance, double angle)
     {
         return new Point(point.X - distance * Math.Cos(angle), point.Y - distance * Math.Sin(angle));
     }

@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrow.Avalonia.Sample.Deskt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrow.Avalonia.Sample.iOS", "src\sample\Arrow.Avalonia.Sample.iOS\Arrow.Avalonia.Sample.iOS.csproj", "{AE6A9E37-747B-4C0A-81B5-ED1DE048601E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrow.Avalonia.Tests.Unit", "test\Arrow.Avalonia.Tests.Unit\Arrow.Avalonia.Tests.Unit.csproj", "{0A1B58DF-D7B5-4F14-B014-1872F0803E2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{AE6A9E37-747B-4C0A-81B5-ED1DE048601E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE6A9E37-747B-4C0A-81B5-ED1DE048601E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE6A9E37-747B-4C0A-81B5-ED1DE048601E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A1B58DF-D7B5-4F14-B014-1872F0803E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1B58DF-D7B5-4F14-B014-1872F0803E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1B58DF-D7B5-4F14-B014-1872F0803E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1B58DF-D7B5-4F14-B014-1872F0803E2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{2F81A1F2-74AE-4B75-9B5F-325BBA4A8580} = {07DED9F4-4133-4BB8-88ED-875FC2981A13}
 		{92A0C398-0558-4DB9-936F-1D15EF69410C} = {07DED9F4-4133-4BB8-88ED-875FC2981A13}
 		{AE6A9E37-747B-4C0A-81B5-ED1DE048601E} = {07DED9F4-4133-4BB8-88ED-875FC2981A13}
+		{0A1B58DF-D7B5-4F14-B014-1872F0803E2E} = {32778F1B-28B0-4E01-B745-15CE05A578C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8CF4CADF-3202-464F-A99C-40C0CBC5CEE0}
