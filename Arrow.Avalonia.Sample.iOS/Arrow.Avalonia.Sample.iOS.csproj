@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-ios</TargetFramework>
     <SupportedOSPlatformVersion>10.0</SupportedOSPlatformVersion>
     <ProvisioningType>manual</ProvisioningType>
     <Nullable>enable</Nullable>
@@ -10,6 +10,9 @@
     <!--<RuntimeIdentifier>ios-arm64</RuntimeIdentifier>-->
     <!--<CodesignKey></CodesignKey>-->
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.iOS" Version="11.0.10" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Arrow.Avalonia.Sample\Arrow.Avalonia.Sample.csproj" />
   </ItemGroup>

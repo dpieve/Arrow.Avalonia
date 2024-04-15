@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ApplicationId>com.CompanyName.AvaloniaTest</ApplicationId>
@@ -14,6 +14,10 @@
     <AndroidResource Include="Icon.png">
       <Link>Resources\drawable\Icon.png</Link>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Android" Version="11.0.10" />
+    <PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.0.1.6" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Arrow.Avalonia.Sample\Arrow.Avalonia.Sample.csproj" />
