@@ -10,9 +10,19 @@ The Arrow Control is developed using Avalonia, making it compatible with multipl
 - __Flexible Head Style__: Choose between filled or unfilled arrow heads to suit different design preferences.
 - __Color Selection__: Select the arrow's color to seamlessly integrate it with your application's visual style.
 
+## Showcase
+
+![showcase](/docs/showcase_sample_arrow_avalonia.gif)
+
 ## Usage
 
-Add the Arrow Control to your .axaml file. See the [sample project](https://github.com/dpieve/Arrow.Avalonia/blob/main/src/sample/Arrow.Avalonia.Sample/Views/MainView.axaml#L50).
+1. Add the package: https://www.nuget.org/packages/ByteVille.Arrow.Avalonia.Control
+
+```
+dotnet add package ByteVille.Arrow.Avalonia.Control
+```
+
+2. Add the Arrow Control to your .axaml file.
 
 ```
 <control:Arrow
@@ -27,6 +37,7 @@ Add the Arrow Control to your .axaml file. See the [sample project](https://gith
          EndPoint="{Binding Arrow.End}" />
 ```
 
+For more info, see the [sample project](https://github.com/dpieve/Arrow.Avalonia/blob/main/src/sample/Arrow.Avalonia.Sample/Views/MainView.axaml#L50).
 
 ## Contributing
 
@@ -38,4 +49,4 @@ Special thanks to [Avalonia](https://avaloniaui.net/) for providing the cross-pl
 
 ## License
 
-This project is license under the MIT License.
+This project is license under the [MIT License](LICENSE.MD).
