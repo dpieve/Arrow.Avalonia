@@ -4,7 +4,34 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>Avalonia Arrow Control</Title>
+    <Authors>Byteville Solutions</Authors>
+    <Description>Create a customizable Arrow with various configurations</Description>
+    <PackageProjectUrl>https://github.com/dpieve/Arrow.Avalonia</PackageProjectUrl>
+    <PackageTags>avalonia;control;arrow;csharp</PackageTags>
+    <PackageId>ByteVille.Arrow.Avalonia.Control</PackageId>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/dpieve/Arrow.Avalonia</RepositoryUrl>
+    <Copyright>MIT</Copyright>
+    <Company>Byteville Solutions</Company>
+    <PackageIcon>avalonia-avatar.png</PackageIcon>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\sample\Arrow.Avalonia.Sample\Assets\avalonia-avatar.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.0.10" />
