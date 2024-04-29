@@ -1,11 +1,9 @@
-﻿using System.Runtime.Versioning;
-using System.Threading.Tasks;
-
-using Arrow.Avalonia.Sample;
-
+﻿using Arrow.Avalonia.Sample;
 using Avalonia;
 using Avalonia.Browser;
 using Avalonia.ReactiveUI;
+using System.Runtime.Versioning;
+using System.Threading.Tasks;
 
 [assembly: SupportedOSPlatform("browser")]
 

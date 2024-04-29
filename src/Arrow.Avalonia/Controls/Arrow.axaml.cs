@@ -2,7 +2,6 @@ using Arrow.Avalonia.Helpers;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Media;
-using System.Diagnostics;
 using static Arrow.Avalonia.Helpers.GetHeadPoints;
 
 namespace Arrow.Avalonia.Controls;
@@ -217,7 +216,6 @@ public partial class Arrow : UserControl
         set => SetValue(HeadWidthProperty, value);
     }
 
-
     /// <summary>
     /// The thickness of the arrow.
     /// </summary>
@@ -259,7 +257,6 @@ public partial class Arrow : UserControl
         {
             s.TrianglePath.Data = CreateFilledHead(headPoints);
         }
-        
     }
 
     private static PathGeometry CreateFilledHead(HeadPoints headPoints)

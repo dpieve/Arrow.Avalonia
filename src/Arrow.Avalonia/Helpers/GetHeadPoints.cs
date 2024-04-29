@@ -9,6 +9,7 @@ public static class GetHeadPoints
 {
     public record Request(Arrow Arrow);
     public record class Response(HeadPoints? HeadPoints);
+
     /// <summary>
     /// Calculates the points that define the head of an arrow.
     /// </summary>
@@ -24,19 +25,19 @@ public static class GetHeadPoints
 
         var slope = CalculateSlope(deltaY, deltaX);
 
-        var angle = Math.Atan(slope); 
+        var angle = Math.Atan(slope);
         var direction = GetDirection(deltaX);
         var headMiddleBottomPoint = CalculatePoint(endPoint, direction, arrow.HeadLength, angle);
 
         var perpendicularSlope = CalculatePerpendicularSlope(slope);
         var perpendicularAngle = Math.Atan(perpendicularSlope);
-       
+
         var leftPoint = CalculatePoint(headMiddleBottomPoint, arrow.HeadWidth, perpendicularAngle);
         var rightPoint = CalculatePoint(headMiddleBottomPoint, -arrow.HeadWidth, perpendicularAngle);
 
         var isUndefined = !leftPoint.X.HasValue() || !leftPoint.Y.HasValue() ||
             !rightPoint.X.HasValue() || !rightPoint.Y.HasValue();
-        
+
         if (isUndefined)
         {
             if (startPoint == endPoint)
