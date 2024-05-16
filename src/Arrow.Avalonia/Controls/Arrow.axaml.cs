@@ -130,7 +130,7 @@ public partial class Arrow : UserControl
         AvaloniaProperty.Register<Arrow, bool>(nameof(IsVisible), defaultValue: true);
 
     public static readonly StyledProperty<bool> IsProportionalProperty =
-      AvaloniaProperty.Register<Arrow, bool>(nameof(IsProportional), true);
+      AvaloniaProperty.Register<Arrow, bool>(nameof(IsProportional), false);
 
     public static readonly StyledProperty<bool> IsFilledProperty =
         AvaloniaProperty.Register<Arrow, bool>(nameof(IsFilled), false);
@@ -230,7 +230,7 @@ public partial class Arrow : UserControl
         var start = s.StartPoint;
         var end = s._endPoint;
         var len = s.IsProportional || !s.HeadLength.HasValue() ? GetProportionalHeadLength.Execute(start, end) : s.HeadLength;
-        var width = s.IsProportional || !s.HeadLength.HasValue() ? GetProportionalHeadWidth.Execute(start, end) : s.HeadWidth;
+        var width = s.IsProportional || !s.HeadWidth.HasValue() ? GetProportionalHeadWidth.Execute(start, end) : s.HeadWidth;
 
         var headPoints = GetHeadPoints.Execute(new(new(start, end, len, width))).HeadPoints;
         if (headPoints is null)
