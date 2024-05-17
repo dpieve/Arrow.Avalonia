@@ -251,7 +251,7 @@ public partial class Arrow : UserControl
         s.ArrowLineHeadRight.StartPoint = headPoints.Right;
         s.ArrowLineHeadRight.EndPoint = headPoints.Top;
 
-        s.TrianglePath.IsVisible = s.IsFilled;
+        s.TrianglePath.IsVisible = s.IsVisible && s.IsFilled;
 
         if (s.IsFilled)
         {
