@@ -5,7 +5,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>Avalonia Arrow Control</Title>
-    <Authors>Byteville Solutions</Authors>
+	<PackageVersion>1.0.1</PackageVersion>
+	<Authors>Byteville Solutions</Authors>
     <Description>Create a customizable Arrow with various configurations</Description>
     <PackageProjectUrl>https://github.com/dpieve/Arrow.Avalonia</PackageProjectUrl>
     <PackageTags>avalonia;control;arrow;csharp</PackageTags>
